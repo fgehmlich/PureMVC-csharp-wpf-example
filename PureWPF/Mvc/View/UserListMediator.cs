@@ -22,7 +22,7 @@ namespace PureWPF.Mvc.View
 
         private void customHandler(string arg1, object arg2, string arg3)
         {
-            Console.WriteLine("Nachricht????");
+            Console.WriteLine("Application successfully started.");
         }
 
         private void userList_SelectUser(object sender, EventArgs e)

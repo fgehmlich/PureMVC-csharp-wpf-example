@@ -24,7 +24,7 @@ namespace PureWPF.Mvc.View
 
         private void readyHandler(string arg1, object arg2, string arg3)
         {
-            Console.WriteLine("TEST TEST TEST TEST");
+            Console.WriteLine("UserProfile successfully implemented in PureMVC");
         }
         private void SelectedUserHandler(string arg1, object arg2, string arg3)
         {
