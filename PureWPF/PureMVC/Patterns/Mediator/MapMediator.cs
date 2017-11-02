@@ -6,6 +6,9 @@ using System.Linq;
 
 namespace PureWPF.PureMVC.Patterns
 {
+    /// <summary>
+    /// This class maps notes with a handling method.
+    /// </summary>
     public class MapMediator : Notifier, IMediator, INotifier
     {
         public const string NAME = "Mediator";
@@ -55,6 +58,13 @@ namespace PureWPF.PureMVC.Patterns
 
         public virtual void OnRemove(){ }
 
+        /// <summary>
+        /// Call this method in the inherting mediator class.
+        /// If the notification has not been added to the map object, 
+        /// it will be added to the interests array and to the map-dictionary.
+        /// </summary>
+        /// <param name="note"></param>
+        /// <param name="handler"></param>
         protected virtual void MapHandler(string note, Action<string, Object, string> handler)
         {
             if (!map.ContainsKey(note))

@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:View="clr-namespace:PureWPF.Mvc.View.Components" x:Class="PureWPF.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="851.256">
+        Title="MainWindow" Height="350" Width="674.245">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15*"/>
             <ColumnDefinition Width="688*"/>
         </Grid.ColumnDefinitions>
 
-        <View:UserList x:Name="UserList" HorizontalAlignment="Left" Height="300" Margin="10,10,0,0" VerticalAlignment="Top" Width="497" Grid.ColumnSpan="2"/>
-        <View:UserProfile x:Name="UserProfile" HorizontalAlignment="Left" Height="258" Margin="492,43,0,0" VerticalAlignment="Top" Width="289" Grid.Column="1"/>
+        <View:UserList x:Name="UserList" HorizontalAlignment="Left" Height="300" Margin="10,10,0,0" VerticalAlignment="Top" Width="346" Grid.ColumnSpan="2"/>
+        <View:UserProfile x:Name="UserProfile" HorizontalAlignment="Left" Height="258" Margin="343,43,0,0" VerticalAlignment="Top" Width="289" Grid.Column="1"/>
 
     </Grid>
 </Window>

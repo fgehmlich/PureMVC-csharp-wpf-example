@@ -11,6 +11,9 @@ using PureWPF.PureMVC.Patterns;
 
 namespace PureWPF.Mvc.View
 {
+    /// <summary>
+    /// Mediator for UserProfile view.
+    /// </summary>
     public class UserProfileMediator : MapMediator
     {
         public new const string NAME = "UserProfileMediator";
@@ -19,16 +22,34 @@ namespace PureWPF.Mvc.View
         public UserProfileMediator(UserProfile view):base(NAME, view)
         {
             MapHandler(ApplicationFacade.USER_SELECTED, SelectedUserHandler);
-            MapHandler(ApplicationFacade.APP_READY, readyHandler);
+            MapHandler(ApplicationFacade.NEW_USER, newUserHandler);
+        }
+        public override void OnRegister()
+        {
+            base.OnRegister();
+            view.setFormMode();
+            view.UpdateUser += new EventHandler(updateUser);
         }
 
-        private void readyHandler(string arg1, object arg2, string arg3)
+        private void newUserHandler(string arg1, object arg2, string arg3)
         {
-            Console.WriteLine("UserProfile successfully implemented in PureMVC");
+            view.ShowUser(new UserVO("","","",""));
+            view.setFormMode();
         }
+
+        private void updateUser(object sender, EventArgs e)
+        {
+            Console.WriteLine("User updated");
+            SendNotification(ApplicationFacade.SAVE_USER, view.User, null);
+        }
+
+
+
+
         private void SelectedUserHandler(string arg1, object arg2, string arg3)
         {
             view.ShowUser((UserVO) arg2);
+            view.setFormMode();
         }
     }
 }

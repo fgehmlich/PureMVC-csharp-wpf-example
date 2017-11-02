@@ -114,6 +114,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Mvc\Controller\Simple\UserCommand.cs" />
     <Compile Include="Mvc\Model\UserProxy.cs" />
     <Compile Include="Mvc\Model\Vo\UserVO.cs" />
     <Compile Include="Mvc\View\Components\UserList.xaml.cs">

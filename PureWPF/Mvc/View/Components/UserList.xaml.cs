@@ -18,7 +18,7 @@ using PureWPF.Mvc.Model.Vo;
 namespace PureWPF.Mvc.View.Components
 {
     /// <summary>
-    /// Interaktionslogik für UserList.xaml
+    /// Interaktionslogic for UserList.xaml
     /// </summary>
     public partial class UserList : UserControl
     {
@@ -27,7 +27,10 @@ namespace PureWPF.Mvc.View.Components
             InitializeComponent();
         }
 
-        
+        /// <summary>
+        /// Loads list of persons from proxy into view.
+        /// </summary>
+        /// <param name="list"></param>
         public void LoadUsers(IList<UserVO> list)
         {
             if (!CheckAccess())

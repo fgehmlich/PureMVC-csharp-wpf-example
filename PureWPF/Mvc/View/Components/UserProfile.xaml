@@ -31,19 +31,8 @@
         <Label Grid.Column="0" Grid.Row="3" Name="sEmail" VerticalAlignment="Bottom" Margin="1">Email:</Label>
         <TextBox Grid.Column="1" Grid.Row="3" Name="email" Margin="1" />
         <Label Grid.Column="0" Grid.Row="4" Name="sUserName" VerticalAlignment="Bottom" Margin="1">User name:</Label>
-        <TextBox Grid.Column="1" Grid.Row="4" Name="userName" Margin="1" TextChanged="userName_TextChanged" />
-        <Label Grid.Column="0" Grid.Row="5" Name="sPassword" VerticalAlignment="Bottom" Margin="1">Password:</Label>
-        <PasswordBox Grid.Column="1" Grid.Row="5" Name="password" Margin="1" PasswordChanged="password_PasswordChanged" />
-        <Label Grid.Column="0" Grid.Row="6" Name="sConfirmPassword" VerticalAlignment="Bottom" Margin="1">Confirm password:</Label>
-        <PasswordBox Grid.Column="1" Grid.Row="6" Name="confirmPassword" Margin="1" PasswordChanged="confirmPassword_PasswordChanged" />
-        <Label Grid.Column="0" Grid.Row="7" Name="sDepartment" VerticalAlignment="Bottom" Margin="1">Department:</Label>
-        <ComboBox Grid.Column="1" Grid.Row="7" Name="department" Margin="1" SelectedIndex="0" SelectionChanged="department_SelectionChanged">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Path=Value}"></TextBlock>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
+        <TextBox Grid.Column="1" Grid.Row="4" Name="userName" Margin="1" />
+
         <StackPanel Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="2" Name="buttonPanel" VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="1,5">
             <Button Height="23" Name="bUpdate" Width="75" Margin="5,0" Click="bUpdate_Click">Update User</Button>
             <Button Height="23" Name="bCancel" Width="75" Click="bCancel_Click">Cancel</Button>

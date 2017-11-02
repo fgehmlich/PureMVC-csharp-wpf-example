@@ -23,11 +23,11 @@
                 <ListView.View>
                     <GridView>
                         <GridView.Columns>
+                            <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Path=Id}" />
                             <GridViewColumn Header="Username" DisplayMemberBinding="{Binding Path=UserName}" />
                             <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding Path=FirstName}" />
                             <GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding Path=LastName}" />
                             <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Path=Email}" />
-                            <GridViewColumn Header="Department" DisplayMemberBinding="{Binding Path=Department}" />
                         </GridView.Columns>
                     </GridView>
                 </ListView.View>

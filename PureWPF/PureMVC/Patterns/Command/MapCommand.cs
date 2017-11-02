@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace PureWPF.PureMVC.Patterns.Command
 {
+    /// <summary>
+    /// This class avoids complex switch statements
+    /// </summary>
     public class MapCommand : Notifier, INotification, ICommand
     {
         public string Name { get; set; }
@@ -31,7 +34,11 @@ namespace PureWPF.PureMVC.Patterns.Command
                 handler(Name, Body, Type);
             }
         }
-
+        /// <summary>
+        /// Call this method in the inheriting command class. 
+        /// </summary>
+        /// <param name="note"></param>
+        /// <param name="handler"></param>
         protected void MapHandler(string note, Action<string, Object, string> handler)
         {
             map[note] = handler;

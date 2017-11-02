@@ -9,13 +9,15 @@ namespace PureWPF.Mvc.Model
     public class UserProxy : Proxy, IProxy
     {
         public new const string NAME = "UserProxy";
+        private static int iterator = 1;
+
 
         public UserProxy() : base(NAME, new ObservableCollection<UserVO>())
         {
-            AddItem(new UserVO("pgriffin", "Peter", "Griffin", "peter@web123.com", "TESTPASSWORD"));
-            AddItem(new UserVO("lgriffin", "Lois", "Griffin", "lgriffin@web123.com", "TESTPASSWORD"));
-            AddItem(new UserVO("jswanson", "Joe", "Swanson", "jswanson@web123.com", "TESTPASSWORD"));
-            AddItem(new UserVO("cbrown", "Cleveland", "Brown", "cleveland@web123.com", "TESTPASSWORD"));
+            AddItem(new UserVO("pgriffin", "Peter", "Griffin", "peter@web123.com"));
+            AddItem(new UserVO("lgriffin", "Lois", "Griffin", "lgriffin@web123.com"));
+            AddItem(new UserVO("jswanson", "Joe", "Swanson", "jswanson@web123.com"));
+            AddItem(new UserVO("cbrown", "Cleveland", "Brown", "cleveland@web123.com"));
         }
 
         public IList<UserVO> Users
@@ -25,6 +27,7 @@ namespace PureWPF.Mvc.Model
 
         public void AddItem(UserVO user)
         {
+            user.Id = iterator++;
             Users.Add(user);
         }
 
@@ -52,4 +55,7 @@ namespace PureWPF.Mvc.Model
             }
         }
     }
+ 
+
+ 
 }
