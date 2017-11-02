@@ -125,7 +125,7 @@
     <Compile Include="Mvc\View\UserListMediator.cs" />
     <Compile Include="Mvc\View\UserProfileMediator.cs" />
     <Compile Include="PureMVC\Patterns\Command\MapCommand.cs" />
-    <Compile Include="PureMVC\Patterns\MapMediator.cs" />
+    <Compile Include="PureMVC\Patterns\Mediator\MapMediator.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
