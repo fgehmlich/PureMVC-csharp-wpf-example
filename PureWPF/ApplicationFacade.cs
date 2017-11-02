@@ -5,6 +5,10 @@ using PureWPF.Mvc.Controller.Simple;
 
 namespace PureWPF
 {
+    /// <summary>
+    /// ApplicationFacade is a concrete facade. It manages commands, mediators and proxys.
+    ///  Generally it will be instantiated if the application has been completely created.
+    /// </summary>
     public class ApplicationFacade : Facade, IFacade
     {
         //Notification messages for communication between the different acteurs.
@@ -15,9 +19,14 @@ namespace PureWPF
         public const string SAVE_USER     = "SafeUser";
         public const string REMOVE_USER = "RemoveUser";
 
-        public ApplicationFacade(string key) : base(key) { }
+        /// <summary>
+        /// Multiton ApplicationFacade factroy method.
+        /// </summary>
+        public ApplicationFacade(string key) : base(key){}
 
-        //All commands must be registered first in this method.
+        /// <summary>
+        /// <b>initializeController</b> registers commands with the controller.
+        /// </summary>
         protected override void InitializeController()
         {
             base.InitializeController();
@@ -25,8 +34,11 @@ namespace PureWPF
             this.RegisterCommand(SAVE_USER, () => new UserCommand());
             this.RegisterCommand(REMOVE_USER, () => new UserCommand());
         }
-        //executed at startup.
-        //Starting Point.
+        
+        /// <summary>
+        /// Application startup
+        /// </summary>
+        /// <param name="app"></param>
         public void Start(MainWindow app)
         {
             SendNotification(STARTAPP, app);

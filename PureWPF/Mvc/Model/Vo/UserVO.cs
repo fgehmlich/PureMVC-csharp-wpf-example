@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace PureWPF.Mvc.Model.Vo
 {
     /// <summary>
-    /// Value Object for User
+    /// UserVO maps the users data to an object.
+    /// These objects can be managed by UserProxy.
     /// </summary>
     public class UserVO
     {

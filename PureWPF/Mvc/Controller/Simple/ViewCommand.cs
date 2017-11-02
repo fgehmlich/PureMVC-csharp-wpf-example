@@ -4,6 +4,10 @@ using System;
 
 namespace PureWPF.Mvc.Controller.Simple
 {
+    /// <summary>
+    /// This command will be executed at the beginning 
+    /// and registers the UserListMediator and the UserProfileMediator at the ApplicationFacade.
+    /// </summary>
     public class ViewCommand : MapCommand
     {
 
