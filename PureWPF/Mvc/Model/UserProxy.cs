@@ -12,9 +12,10 @@ namespace PureWPF.Mvc.Model
 
         public UserProxy() : base(NAME, new ObservableCollection<UserVO>())
         {
-            AddItem(new UserVO("fgehmlich", "Frederic", "Gehmlich", "frederic@web123.com", "TESTPASSWORD"));
-            AddItem(new UserVO("tschmidt", "Thorsten", "Schmidt", "smitty@web123.com", "TESTPASSWORD"));
-            AddItem(new UserVO("wwaldemar", "Waldi", "Waldemar", "wwaldemar@web123.com", "TESTPASSWORD"));
+            AddItem(new UserVO("pgriffin", "Peter", "Griffin", "peter@web123.com", "TESTPASSWORD"));
+            AddItem(new UserVO("lgriffin", "Lois", "Griffin", "lgriffin@web123.com", "TESTPASSWORD"));
+            AddItem(new UserVO("jswanson", "Joe", "Swanson", "jswanson@web123.com", "TESTPASSWORD"));
+            AddItem(new UserVO("cbrown", "Cleveland", "Brown", "cleveland@web123.com", "TESTPASSWORD"));
         }
 
         public IList<UserVO> Users
