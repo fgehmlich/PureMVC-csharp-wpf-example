@@ -24,7 +24,8 @@ namespace PureWPF
         public MainWindow()
         {
             InitializeComponent();
-            ApplicationFacade facade = (ApplicationFacade)Facade.GetInstance("ApplicationFacade", () => new ApplicationFacade("ApplicationFacade"));
+            ApplicationFacade facade = (ApplicationFacade)Facade.GetInstance("ApplicationFacade", 
+                                       () => new ApplicationFacade("ApplicationFacade"));
             facade.Start(this);
         }       
       
