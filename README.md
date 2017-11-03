@@ -9,7 +9,7 @@ Model, View and Controller are represented by three singletons, which are manage
 
 All acteurs are able to interact with each other by notifications.
 
-##Start with the facade
+## Start with the facade
 Whenever you work with PureMVC, you must understand that coding always starts with the facade.
 The facade is a layer that links the framework, the MVC code and Main class; In this case it is MainWindow.xaml.cs, which can be easily generated in our VisualStudio environment.
 
