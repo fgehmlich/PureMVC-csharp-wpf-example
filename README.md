@@ -7,7 +7,7 @@ and allows the development of modular applications (MultiCore-Version).
 
 Model, View and Controller are represented by three singletons, which are managed by the Facade.
 
-All acteurs are able to interact with each other by Notifictions.
+All acteurs are able to interact with each other by notifications.
 
 ##Start with the facade
 Whenever you work with PureMVC, you must understand that coding always starts with the facade.
