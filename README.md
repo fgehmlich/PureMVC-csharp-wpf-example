@@ -1,7 +1,7 @@
 # PureMVC C#: WPF Example
 An example how PureMVC can be implemented in C#
 
-#Fundamentals
+# Fundamentals
 PureMVC is a lightweight framework for creating applications based upon the model–view–controller (MVC) design pattern. PureMVC is available for several programming languages, e.g. ActionScript 3, C#, Java, JavaScript, C++, Objective-C, etc.
 and allows the development of modular applications (MultiCore-Version).
 
@@ -32,7 +32,7 @@ namespace PureWPF
 }
 ```
 
-##Setting up the ApplicationFacade
+## Setting up the ApplicationFacade
 The next step requires the creation of an ApplicationFacade, which inherits from Facade.
 This class is clearly structured and contains the following methods and properties:
 
@@ -91,7 +91,7 @@ namespace PureWPF
 }
 ```
 
-##The Start command
+## The Start command
 The start method dispatches a StartApp-notification which triggers the StartCommand.cs file.
 This class is a a so called MacroCommand and is able to delegate tasks to referenced sub-commands.
 
@@ -115,7 +115,7 @@ namespace PureWPF.Mvc.Controller.Macro
 These sub-commands can be used to register the model and the view at the facade.
 As you can see below:
 
-###ModelCommand
+### ModelCommand
 ```csharp
 using PureWPF.PureMVC.Patterns.Command;
 using System;
@@ -141,7 +141,7 @@ namespace PureWPF.Mvc.Controller.Simple
 ```
 
 
-###ViewCommand
+### ViewCommand
 ```csharp
 using PureWPF.Mvc.View;
 using PureWPF.PureMVC.Patterns.Command;
@@ -174,12 +174,12 @@ namespace PureWPF.Mvc.Controller.Simple
 }
 ```
 
-##Creating a proxy
+## Creating a proxy
 A proxy is a representation of the model in PureMVC. These classes can be used to manage all data transactions.
 A proxy can be used to retrieve data from a remote database, data from an XML file or to store entries only at runtime.
 However, all records should be mapped in value objects to ensure an easy data access at runtime.
 
-###UserProxy.cs
+### UserProxy.cs
 ```csharp
 using PureMVC.Interfaces;
 using PureMVC.Patterns.Proxy;
@@ -258,7 +258,7 @@ namespace PureWPF.Mvc.Model
 }
 ```
 
-###UserVO.cs
+### UserVO.cs
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -308,7 +308,7 @@ namespace PureWPF.Mvc.Model.Vo
 }
 ```
 
-##Creating a Mediator
+## Creating a Mediator
 To ensure loose coupling, views interact with the framework only in a indirect way.
 This can be realized by the usage of Mediators. These mediators listen for events that are triggered by the view component and send a notification to the framework, if it is necessary.
 
